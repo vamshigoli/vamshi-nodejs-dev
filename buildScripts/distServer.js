@@ -16,16 +16,16 @@ app.use(express.static('dist'));
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname,'../dist/index.html'));
 });
-
-app.get('/users', function(req, res){
-  // Hard coding for simplicity. Pretend this hits a real database
+/*commenting this section because we are hitting the heroku */
+/*app.get('/users', function(req, res){
   res.json([
     {"id":1,"firstName":"vamshi","lastName":"goli","email":"vamshi@tapresume.com"},
     {"id":2,"firstName":"gopal","lastName":"kumar","email":"gopal@tapresume.com"},
     {"id":3,"firstName":"vinod","lastName":"kumar","email":"vinod@tapresume.com"}
   ]);
 
-});
+});*/
+//comments ends here
 
 app.listen(port, function(err){
   if(err){
