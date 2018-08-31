@@ -12,7 +12,7 @@ export function deleteUser(id){
 }
 
 function get(url){
-  return fetch(baseUrl + url).then(onSuccess, onError);
+  return fetch(baseUrl+url).then(onSuccess, onError);
 }
 
 function del(url){
